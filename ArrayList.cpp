@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 
+/*Alunos
+    *Judiclei Almeida - 365191049
+    *Moisés Costa - 365191055
+    *Willinson Bastos - 365192008
+*/
+
 template <class T> class ArrayList{
 	
 	private:
