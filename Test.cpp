@@ -82,7 +82,7 @@ void remove_elementoRemovido_tamanhoListDecrementado_trueRetornado() {
     list.add("a");
     list.add("b");
     list.add("c");
-
+	
     assert(list.remove("a"), 
 	"remove_elementoRemovido_tamanhoListDecrementado_trueRetornado");
 	
@@ -101,7 +101,7 @@ void remove_posicoesAlteradas_trueRetornado() {
 	"remove_posicoesAlteradas_trueRetornado");
     
     assert(list.get(0) == "b", 
-    "remove_posicoesAlteradas_trueRetornado");
+	"remove_posicoesAlteradas_trueRetornado");
 }
 
 void remove_elementoNaoEncontrado_falseRetornado(){
@@ -216,22 +216,28 @@ void indexOf_valorInexistentePassado_NegativoRetornado(){
 /*------------------------------------------------------------------*/
 int main(int argc, char** argv)
 {
-	// add_verificarTamanho_tamanhoCorreto();
-	// add_adicionarMaximaCapacidade_capacidadeoAumentada();
-	// add_adiconarNaPosicao_elementoAdicionado();
-	// add_indexCorretoPassado_trueRetornado();
-	// add_indexIncorretoPassado_falseRetornado();
-	// removeAt_elementoRemovido_trueRetornado_tamanhoDecrementado();
-	// removeAt_indexNaoEncontrado_falseRetornado_tamanhoNaoAlterado();
-	// clear_limparTudo_tamanhoReiniciado_listEmpty();
-	// clear_valoresZerados_novosValoresAdicionados_ok();
-	// get_indexCorreto_valorRetornado();
-	// get_indexIncorreto_excecaoLancada();
-	// indexOf_valorPassado_indexRetornado();
-	// indexOf_valorInexistentePassado_NegativoRetornado();
-	// remove_elementoRemovido_tamanhoListDecrementado_trueRetornado();
-	// remove_elementoNaoEncontrado_falseRetornado();
-	remove_posicoesAlteradas_trueRetornado();//s� falta esse para resolver, o problema est� em copiar arrays.
+	add_verificarTamanho_tamanhoCorreto();
+	add_adicionarMaximaCapacidade_capacidadeoAumentada();
+	add_adiconarNaPosicao_elementoAdicionado();
+	add_indexCorretoPassado_trueRetornado();
+	add_indexIncorretoPassado_falseRetornado();
+	
+	remove_elementoRemovido_tamanhoListDecrementado_trueRetornado();
+	remove_elementoNaoEncontrado_falseRetornado();
+	remove_posicoesAlteradas_trueRetornado();
+	
+	removeAt_elementoRemovido_trueRetornado_tamanhoDecrementado();
+	removeAt_indexNaoEncontrado_falseRetornado_tamanhoNaoAlterado();
+	
+	clear_limparTudo_tamanhoReiniciado_listEmpty();
+	clear_valoresZerados_novosValoresAdicionados_ok();
+	
+	get_indexCorreto_valorRetornado();
+	get_indexIncorreto_excecaoLancada();
+	
+	indexOf_valorPassado_indexRetornado();
+	indexOf_valorInexistentePassado_NegativoRetornado();
+	
 	
 	return 0;
 }

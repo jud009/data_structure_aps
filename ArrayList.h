@@ -115,14 +115,17 @@ template <class T> class ArrayList{
 		}
 		
 		void deleteValue(int index) {
-	        T tempArray[capacity];
-	
-	        for (int i = 0, position = 0; i < size; i++) {
+	        T* tempArray;
+	        tempArray = new T[capacity];
+	        
+			int position = 0;
+	        for (int i = 0; i < size; i++) {
 	            if (i == index){
 					continue;
 				}
 	                
-	            tempArray[position++] = array[i];
+	            tempArray[position] = array[i];
+	            position++;
 	        }
 			
 	        array = tempArray;
@@ -131,7 +134,10 @@ template <class T> class ArrayList{
     	
     	void increaseSize() {
 	        capacity = capacity * 2;
-	        T tempArray[capacity];
+	        
+	        T* tempArray;
+	        tempArray = new T[capacity];
+	        
 	        for (int x = 0; x < size; x++) {
 	            tempArray[x] = array[x];
 	        }

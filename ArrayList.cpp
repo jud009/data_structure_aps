@@ -118,9 +118,10 @@ template <class T> class ArrayList{
 	            if (i == index){
 					continue;
 				}
+	                
 	            tempArray[position++] = array[i];
 	        }
-	
+			
 	        array = tempArray;
 	        size--;
     	}
