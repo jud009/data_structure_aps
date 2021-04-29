@@ -41,8 +41,7 @@ template <class T> class ArrayList{
     	}
     	
     	bool remove(T elem) {
-			int len = sizeof(array)/sizeof(array[0]);
-	        for (int x = 0; x < len; x++) {
+	        for (int x = 0; x < size; x++) {
 	            if (array[x] == elem) {
 	                deleteValue(x);
 	                return true;
@@ -61,12 +60,6 @@ template <class T> class ArrayList{
     	}
     	
     	void clear() {
-    		
-    		int len = sizeof(array)/sizeof(array[0]);
-	        for (int x = 0; x < len; x++) {
-	            array[x] = NULL;
-	        }
-	        
 	        size = 0;
 	        capacity = 10;
 	        array = new T[capacity];
@@ -80,13 +73,7 @@ template <class T> class ArrayList{
     	}
     	
     	int indexOf(T elem) {
-	
-	        if (elem == NULL) {
-	            return -1;
-	        }
-	        
-			int len = sizeof(array)/sizeof(array[0]);
-	        for (int x = 0; x < len; x++) {
+	        for (int x = 0; x < size; x++) {
 	            if (array[x] == elem) {
 	                return x;
 	            }
@@ -128,8 +115,9 @@ template <class T> class ArrayList{
 	        T tempArray[capacity];
 	
 	        for (int i = 0, position = 0; i < size; i++) {
-	            if (i == index)
-	                continue;
+	            if (i == index){
+					continue;
+				}
 	            tempArray[position++] = array[i];
 	        }
 	
@@ -138,11 +126,9 @@ template <class T> class ArrayList{
     	}
     	
     	void increaseSize() {
-    		int len = sizeof(array)/sizeof(array[0]);
- 		
 	        capacity = capacity * 2;
 	        T tempArray[capacity];
-	        for (int x = 0; x < len; x++) {
+	        for (int x = 0; x < size; x++) {
 	            tempArray[x] = array[x];
 	        }
 	        array = tempArray;
